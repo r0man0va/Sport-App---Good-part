@@ -70,6 +70,7 @@
             this.ExerciseMinusButton.TabIndex = 2;
             this.ExerciseMinusButton.Text = "-";
             this.ExerciseMinusButton.UseVisualStyleBackColor = true;
+            this.ExerciseMinusButton.Click += new System.EventHandler(this.ExerciseMinusButton_Click);
             // 
             // ExercisePlusButton
             // 
@@ -79,6 +80,7 @@
             this.ExercisePlusButton.TabIndex = 3;
             this.ExercisePlusButton.Text = "+";
             this.ExercisePlusButton.UseVisualStyleBackColor = true;
+            this.ExercisePlusButton.Click += new System.EventHandler(this.ExercisePlusButton_Click);
             // 
             // SetExerciseTimeTextBox
             // 
@@ -87,6 +89,7 @@
             this.SetExerciseTimeTextBox.Size = new System.Drawing.Size(125, 27);
             this.SetExerciseTimeTextBox.TabIndex = 4;
             this.SetExerciseTimeTextBox.Text = "60 сек";
+            this.SetExerciseTimeTextBox.TextChanged += new System.EventHandler(this.SetExerciseTimeTextBox_TextChanged);
             // 
             // RestLabel
             // 
@@ -105,6 +108,7 @@
             this.RestMinusButton.TabIndex = 6;
             this.RestMinusButton.Text = "-";
             this.RestMinusButton.UseVisualStyleBackColor = true;
+            this.RestMinusButton.Click += new System.EventHandler(this.RestMinusButton_Click);
             // 
             // RestPlusButton
             // 
@@ -114,6 +118,7 @@
             this.RestPlusButton.TabIndex = 7;
             this.RestPlusButton.Text = "+";
             this.RestPlusButton.UseVisualStyleBackColor = true;
+            this.RestPlusButton.Click += new System.EventHandler(this.RestPlusButton_Click);
             // 
             // SetRestTimeTextBox
             // 
@@ -122,6 +127,7 @@
             this.SetRestTimeTextBox.Size = new System.Drawing.Size(125, 27);
             this.SetRestTimeTextBox.TabIndex = 8;
             this.SetRestTimeTextBox.Text = "20 сек";
+            this.SetRestTimeTextBox.TextChanged += new System.EventHandler(this.SetRestTimeTextBox_TextChanged);
             // 
             // DurationLabel
             // 
@@ -140,6 +146,7 @@
             this.DurationMinusButton.TabIndex = 10;
             this.DurationMinusButton.Text = "-";
             this.DurationMinusButton.UseVisualStyleBackColor = true;
+            this.DurationMinusButton.Click += new System.EventHandler(this.DurationMinusButton_Click);
             // 
             // DurationPlusButton
             // 
@@ -149,6 +156,7 @@
             this.DurationPlusButton.TabIndex = 11;
             this.DurationPlusButton.Text = "+";
             this.DurationPlusButton.UseVisualStyleBackColor = true;
+            this.DurationPlusButton.Click += new System.EventHandler(this.DurationPlusButton_Click);
             // 
             // SetDurationCountTextBox
             // 
@@ -157,6 +165,7 @@
             this.SetDurationCountTextBox.Size = new System.Drawing.Size(125, 27);
             this.SetDurationCountTextBox.TabIndex = 12;
             this.SetDurationCountTextBox.Text = "4";
+            this.SetDurationCountTextBox.TextChanged += new System.EventHandler(this.SetDurationCountTextBox_TextChanged);
             // 
             // ConfirmSettingsButton
             // 

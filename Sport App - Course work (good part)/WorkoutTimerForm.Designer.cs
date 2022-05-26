@@ -52,6 +52,7 @@
             this.SettingsButton.TabIndex = 1;
             this.SettingsButton.Text = "Настроить";
             this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // StartButton
             // 

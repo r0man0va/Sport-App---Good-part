@@ -7,6 +7,10 @@ namespace Sport_App___Course_work__good_part_
             InitializeComponent();
         }
 
-       
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.ShowDialog();
+        }
     }
 }
