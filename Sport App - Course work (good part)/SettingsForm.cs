@@ -168,5 +168,13 @@ namespace Sport_App___Course_work__good_part_
             
             
         }
+
+        private void ConfirmSettingsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mainForm = new MainForm(SetExerciseTimeTextBox.Text, SetRestTimeTextBox.Text, SetDurationCountTextBox.Text, true);
+            mainForm.ShowDialog();
+            
+        }
     }
 }

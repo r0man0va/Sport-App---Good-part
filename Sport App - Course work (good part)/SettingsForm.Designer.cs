@@ -174,8 +174,9 @@
             this.ConfirmSettingsButton.Name = "ConfirmSettingsButton";
             this.ConfirmSettingsButton.Size = new System.Drawing.Size(94, 29);
             this.ConfirmSettingsButton.TabIndex = 13;
-            this.ConfirmSettingsButton.Text = "Начать";
+            this.ConfirmSettingsButton.Text = "Сохранить";
             this.ConfirmSettingsButton.UseVisualStyleBackColor = true;
+            this.ConfirmSettingsButton.Click += new System.EventHandler(this.ConfirmSettingsButton_Click);
             // 
             // TotalTimeLabelCount
             // 

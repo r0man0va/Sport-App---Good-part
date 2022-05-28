@@ -42,7 +42,7 @@
             this.MainClockTextBox.Name = "MainClockTextBox";
             this.MainClockTextBox.Size = new System.Drawing.Size(171, 27);
             this.MainClockTextBox.TabIndex = 0;
-            this.MainClockTextBox.Text = "00 : 00";
+            this.MainClockTextBox.Text = "20 сек";
             // 
             // SettingsButton
             // 
@@ -62,6 +62,7 @@
             this.StartButton.TabIndex = 2;
             this.StartButton.Text = "Старт";
             this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // PauseButton
             // 
@@ -77,9 +78,9 @@
             this.ExerciseOrRestLabel.AutoSize = true;
             this.ExerciseOrRestLabel.Location = new System.Drawing.Point(79, 32);
             this.ExerciseOrRestLabel.Name = "ExerciseOrRestLabel";
-            this.ExerciseOrRestLabel.Size = new System.Drawing.Size(101, 20);
+            this.ExerciseOrRestLabel.Size = new System.Drawing.Size(109, 20);
             this.ExerciseOrRestLabel.TabIndex = 4;
-            this.ExerciseOrRestLabel.Text = "УПР \\ ОТДЫХ";
+            this.ExerciseOrRestLabel.Text = "УПРАЖНЕНИЕ";
             // 
             // SetCounterLabel
             // 
@@ -88,7 +89,7 @@
             this.SetCounterLabel.Name = "SetCounterLabel";
             this.SetCounterLabel.Size = new System.Drawing.Size(105, 20);
             this.SetCounterLabel.TabIndex = 5;
-            this.SetCounterLabel.Text = "Подход 1 из 8";
+            this.SetCounterLabel.Text = "Подход 1 из 4";
             // 
             // MainForm
             // 
@@ -103,6 +104,7 @@
             this.Controls.Add(this.MainClockTextBox);
             this.Name = "MainForm";
             this.Text = "WorkOut Timer";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
