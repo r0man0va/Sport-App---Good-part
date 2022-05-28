@@ -30,7 +30,7 @@ namespace Sport_App___Course_work__good_part_
 
         private void SetExerciseTimeTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            TotalTimeClock();
         }
 
         private void RestMinusButton_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace Sport_App___Course_work__good_part_
 
         private void SetRestTimeTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            TotalTimeClock();
         }
 
         private void DurationMinusButton_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Sport_App___Course_work__good_part_
 
         private void SetDurationCountTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            TotalTimeClock();
         }
 
         private void ExerciseActionButton_Clicked(bool actionMode) 
@@ -131,6 +131,42 @@ namespace Sport_App___Course_work__good_part_
 
             string newSecondsCount = newSeconds.ToString();
             SetDurationCountTextBox.Text = newSecondsCount;
+        }
+
+        private void TotalTimeClock() 
+        {
+            int totalTime = 0;
+            Regex regex = new Regex(@"[\w]+");
+            
+            // работа со временем взятым из Упражнение
+            string exerciseTimeStr = SetExerciseTimeTextBox.Text;
+            MatchCollection matchesExercize = regex.Matches(exerciseTimeStr);
+            int exerciseTime = Convert.ToInt32((string)matchesExercize[0].Value);
+
+
+            string restTimeStr = SetRestTimeTextBox.Text;
+            MatchCollection matchesRest = regex.Matches(restTimeStr);
+            int restTime = Convert.ToInt32((string)matchesRest[0].Value);
+
+
+            string durationCountStr = SetDurationCountTextBox.Text;
+            int durationCount = Convert.ToInt32(durationCountStr);
+
+            totalTime = (exerciseTime + restTime) * durationCount;
+            string totalTimeStr;
+            if (totalTime > 60)
+            {
+                totalTimeStr = (totalTime/60).ToString() + " мин ";
+                totalTimeStr += (totalTime % 60).ToString();
+                totalTimeStr += " сек";
+                TotalTimeLabelCount.Text = totalTimeStr;
+            }
+            else {
+
+                TotalTimeLabelCount.Text = (totalTime.ToString()+" сек");
+            }
+            
+            
         }
     }
 }

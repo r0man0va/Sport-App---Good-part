@@ -42,16 +42,17 @@
             this.DurationPlusButton = new System.Windows.Forms.Button();
             this.SetDurationCountTextBox = new System.Windows.Forms.TextBox();
             this.ConfirmSettingsButton = new System.Windows.Forms.Button();
+            this.TotalTimeLabelCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TotalTimeLabel
             // 
             this.TotalTimeLabel.AutoSize = true;
-            this.TotalTimeLabel.Location = new System.Drawing.Point(110, 38);
+            this.TotalTimeLabel.Location = new System.Drawing.Point(37, 30);
             this.TotalTimeLabel.Name = "TotalTimeLabel";
-            this.TotalTimeLabel.Size = new System.Drawing.Size(153, 20);
+            this.TotalTimeLabel.Size = new System.Drawing.Size(112, 20);
             this.TotalTimeLabel.TabIndex = 0;
-            this.TotalTimeLabel.Text = "Общее время: 6 мин";
+            this.TotalTimeLabel.Text = "Общее время: ";
             // 
             // ExerciseLabel
             // 
@@ -88,7 +89,7 @@
             this.SetExerciseTimeTextBox.Name = "SetExerciseTimeTextBox";
             this.SetExerciseTimeTextBox.Size = new System.Drawing.Size(125, 27);
             this.SetExerciseTimeTextBox.TabIndex = 4;
-            this.SetExerciseTimeTextBox.Text = "60 сек";
+            this.SetExerciseTimeTextBox.Text = "20 сек";
             this.SetExerciseTimeTextBox.TextChanged += new System.EventHandler(this.SetExerciseTimeTextBox_TextChanged);
             // 
             // RestLabel
@@ -126,7 +127,7 @@
             this.SetRestTimeTextBox.Name = "SetRestTimeTextBox";
             this.SetRestTimeTextBox.Size = new System.Drawing.Size(125, 27);
             this.SetRestTimeTextBox.TabIndex = 8;
-            this.SetRestTimeTextBox.Text = "20 сек";
+            this.SetRestTimeTextBox.Text = "10 сек";
             this.SetRestTimeTextBox.TextChanged += new System.EventHandler(this.SetRestTimeTextBox_TextChanged);
             // 
             // DurationLabel
@@ -176,11 +177,21 @@
             this.ConfirmSettingsButton.Text = "Начать";
             this.ConfirmSettingsButton.UseVisualStyleBackColor = true;
             // 
+            // TotalTimeLabelCount
+            // 
+            this.TotalTimeLabelCount.AutoSize = true;
+            this.TotalTimeLabelCount.Location = new System.Drawing.Point(186, 31);
+            this.TotalTimeLabelCount.Name = "TotalTimeLabelCount";
+            this.TotalTimeLabelCount.Size = new System.Drawing.Size(50, 20);
+            this.TotalTimeLabelCount.TabIndex = 14;
+            this.TotalTimeLabelCount.Text = "2 мин";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 451);
+            this.Controls.Add(this.TotalTimeLabelCount);
             this.Controls.Add(this.ConfirmSettingsButton);
             this.Controls.Add(this.SetDurationCountTextBox);
             this.Controls.Add(this.DurationPlusButton);
@@ -218,5 +229,6 @@
         private Button DurationPlusButton;
         private TextBox SetDurationCountTextBox;
         private Button ConfirmSettingsButton;
+        private Label TotalTimeLabelCount;
     }
 }
