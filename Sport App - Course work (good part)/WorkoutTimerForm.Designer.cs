@@ -72,6 +72,7 @@
             this.PauseButton.TabIndex = 3;
             this.PauseButton.Text = "Пауза";
             this.PauseButton.UseVisualStyleBackColor = true;
+            this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
             // 
             // ExerciseOrRestLabel
             // 
@@ -95,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 433);
+            this.ClientSize = new System.Drawing.Size(276, 433);
             this.Controls.Add(this.SetCounterLabel);
             this.Controls.Add(this.ExerciseOrRestLabel);
             this.Controls.Add(this.PauseButton);
@@ -104,7 +105,6 @@
             this.Controls.Add(this.MainClockTextBox);
             this.Name = "MainForm";
             this.Text = "WorkOut Timer";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

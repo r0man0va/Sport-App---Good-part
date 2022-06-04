@@ -1,14 +1,13 @@
 using System.Text.RegularExpressions;
-
+using System.Threading;
 
 namespace Sport_App___Course_work__good_part_
 {
     public partial class MainForm : Form
     {
-        System.Timers.Timer t;
-
         private string exerciseTime, restTime, durationTime;
         private bool newDefaultSettings;
+       // private bool paussedButtonClicked = false;
         public MainForm(string exerciseTime = "", string restTime = "", string durationTime = "", bool newDefaultSettings = false)
         {
             InitializeComponent();
@@ -40,22 +39,44 @@ namespace Sport_App___Course_work__good_part_
             int rest = Times[1];
             int duration = Times[2];
 
+            TimeSpan timeout = new TimeSpan(0, 0, 1);
+
             for (int i = 1; i <= duration; i++)
             {
                 SetDurationCounterLabel(i, duration); // œÓ‰ıÓ‰ i ËÁ duration
+                ExerciseOrRestLabel.Text = "”œ–¿∆Õ≈Õ»≈";
+                ExerciseOrRestLabel.Refresh();
+                for (int j = exercise; j > 0; j--) 
+                {
+                    string newMainClockTextBox = j.ToString();
+                    newMainClockTextBox += " ÒÂÍ";
+                    MainClockTextBox.Text = newMainClockTextBox;
+                    MainClockTextBox.Refresh();
+                    Thread.Sleep(timeout);
+                }
+
+                ExerciseOrRestLabel.Text = "Œ“ƒ€’";
+                ExerciseOrRestLabel.Refresh();
+                for (int j = rest; j > 0; j--)
+                {
+                    string newMainClockTextBox = j.ToString();
+                    MainClockTextBox.Text = newMainClockTextBox;
+                    MainClockTextBox.Refresh();
+                    Thread.Sleep(timeout);
+                }
             }
                 
         }
 
+
         private void StartButton_Click(object sender, EventArgs e)
         {
-            //SetWorkoutCycles();
-            int h, m, s;
+            SetWorkoutCycles();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void PauseButton_Click(object sender, EventArgs e)
         {
-
+            //paussedButtonClicked = true;
         }
 
         private int[] GetIntValues(string exercise, string rest, string duration) 
@@ -82,6 +103,7 @@ namespace Sport_App___Course_work__good_part_
         {
             string durationLabel = "œÓ‰ıÓ‰ " + currentCycle.ToString() + " ËÁ " + cyclesTotal.ToString();
             SetCounterLabel.Text = durationLabel;
+            SetCounterLabel.Refresh();
 
         }
     }
